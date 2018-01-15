@@ -4,6 +4,6 @@ import './../styles/index.less';
 
 import React from 'react';
 import { render } from 'react-dom';
-import Hello from './components/hello'; // eslint-disable-line
+import RouterConfig from './routers/router';
 console.log(React.version) // eslint-disable-line
-render( <Hello name="my react test"/> , document.getElementById('root'));
+render( <RouterConfig/> , document.getElementById('root'));

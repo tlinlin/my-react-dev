@@ -1,5 +1,6 @@
 import React from 'react';
 import { mixins, testable } from '../mixins/mixins';
+import Funcomponents from './funcomponents';
 
 @mixins()
 class Form extends React.Component {
@@ -39,6 +40,7 @@ class Form extends React.Component {
                     <p>姓名：{this.state.name}</p>
                     <p>年龄：{this.state.age}</p>
                 </form>
+                <Funcomponents data='11111111111111111'/>
             </div>
         );
     }
