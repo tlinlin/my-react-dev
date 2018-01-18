@@ -1,8 +1,6 @@
 import React from 'react';
 import Fun from './funcomponents';
 import './../../styles/Hello.less';
-import List from './list';
-import Form from './form';
 export default class Hello extends React.Component{
     constructor(props) {
         super(props);

@@ -1,6 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import axios from 'axios';
 // import PropTypes from 'prop-types'; 传参验证用
+@withRouter
 class NumberList extends React.Component {
     constructor(props){
         super(props);
@@ -11,7 +13,21 @@ class NumberList extends React.Component {
 
     componentDidMount() {
         console.log('页面渲染完成about页面+ 下面跳转返回到首页');
-        this.props.history.push('/'); // 手动跳转页面
+        axios.get('http://localhost:9080/app/back')
+        .then(function (response) {
+            console.log(response);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+        axios.post('http://localhost:9080/app/myhome')
+        .then(function (response) {
+            console.log(response);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+        // this.props.history.push('/'); // 手动跳转页面
     }
 
     render() {
@@ -24,4 +40,4 @@ class NumberList extends React.Component {
         );
     }
 }
-export default withRouter(NumberList);
+export default NumberList;

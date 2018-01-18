@@ -10,5 +10,6 @@ module.exports = {
         port: 9000,
         inline: false,
         filename: 'bundle.js',
+        historyApiFallback: true
     }
 };

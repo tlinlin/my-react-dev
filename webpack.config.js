@@ -9,7 +9,8 @@ var config = {
     output: {
         publicPath: '',
         path: path.join(__dirname, '/dist'),
-        filename: 'js/bundle.js'
+        filename: 'js/[name].js',
+        chunkFilename: '[name].[id].js'
     },
     module: {
         rules: [{
@@ -20,7 +21,7 @@ var config = {
                 options: {  
                     presets: ['react']  
                 }
-            }, 'eslint-loader'],
+            }, 'eslint-loader']
 
         }, {
             test: /\.(less|css)$/,
